@@ -125,12 +125,14 @@ Before analysis, the following data quality issues were identified and handled:
 ---
 
 ## SQL Concepts Used
-- `JOIN` — linking fact and dimension tables
-- `GROUP BY` + aggregate functions (`SUM`, `COUNT`, `AVG`)
-- `HAVING` — filtering aggregated results
-- `CASE WHEN` — customer segmentation/categorization
-- Subqueries — filtering against calculated averages
-- CTEs (Common Table Expressions) — organizing complex multi-step queries
-- Window Functions — `RANK()`, `DENSE_RANK()`, `ROW_NUMBER()`, `LAG()`
-- `UNION ALL` — combining result sets
-- Date functions — `EXTRACT()` for month/quarter/year/DOW analysis
+- `WHERE` — filtering data (date ranges, pattern matching with `LIKE/NOT LIKE`, `IS NULL`)
+- `COUNT(DISTINCT)` — counting unique orders and customers
+- `SUM` — calculating total revenue
+- `GROUP BY` + aggregate functions — grouping data by product, customer, country, day
+- `HAVING` — filtering grouped results (one-time customers)
+- `ORDER BY` + `LIMIT` — ranking and limiting results
+- `EXTRACT()` — pulling month and day of week from dates
+- `CASE WHEN` — segmenting customers into VIP, Regular, Low Value tiers
+- CTEs (Common Table Expressions) — organizing multi-step queries
+- `LAG()` window function — month-over-month revenue trend analysis
+- `ROUND()` — formatting percentage change to 2 decimal places
