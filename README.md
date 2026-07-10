@@ -10,7 +10,7 @@ This project analyzes 541,909 transactions from a UK-based online retailer (2010
 ---
 
 ## Business Problem
-As a data analyst, I was tasked with answering 8 key business questions to help the company make better decisions around inventory, marketing, staffing, and customer retention.
+As an aspiring data analyst, this is my first end-to-end SQL project. I analyzed a real-world retail dataset to answer 8 key business questions that help a company make better decisions around inventory management, customer retention, marketing campaigns, and staffing optimization.
 
 ---
 
